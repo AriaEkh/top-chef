@@ -22,8 +22,9 @@ function restaurants(i){
             var $ = cheerio.load(html);
 
             $('[attr-gtm-type = poi]').each(function(i, elem){
+                
+            var data = $(elem);
                 var resto = {nom: "", prix: "", offre: "", genre: ""};
-                var data = $(elem);
                 resto.offre = data.find('.mtpb2c-offers').text();
                 resto.nom = data.attr("attr-gtm-title");
                 resto.genre = data.find('.poi_card-display-cuisines').text();
