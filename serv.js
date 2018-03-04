@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
     res.json({ message: 'Welcome !' });
 });
 
-router.route('/restaurants')
+router.route('/restaurants.json')
     .get((req, res) => {
         scrap.LOAD_PROMO()
             .then(file => {
@@ -36,4 +36,4 @@ router.route('/restaurants')
 app.use('/api', router);
 
 app.listen(port);
-console.log('Port: ' + port);
+//console.log('Port: ' + port);
