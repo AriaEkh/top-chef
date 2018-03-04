@@ -1,0 +1,10 @@
+Please go to into your top-chef directory via your terminal
+
+Then prompt the next command in your terminal:
+
+--------------------
+cd launch
+npm start
+--------------------
+
+
